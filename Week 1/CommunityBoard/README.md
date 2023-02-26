@@ -26,7 +26,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://i.imgur.com/zi2Ajq6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/ngoctramvu/CodePath-Web-Dev-102/blob/main/Week%201/CommunityBoard/public/week1-walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [Kap](https://getkap.co/) for macOS
