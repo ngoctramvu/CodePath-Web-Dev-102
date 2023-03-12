@@ -1,0 +1,142 @@
+@import"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Poppins,sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa)
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa)
+}
+
+@keyframes logo-spin {
+  0% {
+      transform: rotate(0)
+  }
+
+  to {
+      transform: rotate(360deg)
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear
+  }
+}
+
+.card {
+  padding: 2em
+}
+
+.read-the-docs {
+  color: #888
+}
+
+li {
+  list-style: none
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: auto;
+  position: relative;
+}
+
+.mini-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 25px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px #0003,0 6px 20px #00000030;
+  width: 150px;
+}
+
+.mini-header {
+  height: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e2c393;
+  text-align: center;
+  border-radius: 10px;
+  width: 93%;
+  margin: 0
+}
+
+#wrong {
+  background-color: #db5d5d
+}
+
+#correct {
+  background-color: #bf74bf
+}
+
+.answer-space {
+  background-color: #e2c393;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  clear: both
+}
+
+li {
+  margin: 3px 10%;
+  background-color: #fffdd0;
+  border-radius: 15px
+}
+
+button.newdrink {
+  width: auto;
+  text-align: center
+}
+
+.button {
+  background-color: #8a620cf0;
+  font-weight: 700;
+  color: #fff
+}
+
+.omg-logo {
+  height: 100px
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 0
+}
+
+.title-container {
+  text-align: left;
+  margin-bottom: 50px
+}
+
+.drink-container {
+  display: flex;
+  justify-content: space-between
+}
+
+
+body {
+  background-color: #fff;
+  color: #000;
+}
