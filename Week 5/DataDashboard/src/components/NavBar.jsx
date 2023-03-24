@@ -2,7 +2,7 @@ const NavBar = () => {
   return (
     <div className="App-sidebar">
       <div className="Header">
-        <h3 className="Header-title">AstroDash</h3>
+        <h3 className="Header-title">SeatGeek Dashboard</h3>
       </div>
       <div className="Menu">
         <ul>
