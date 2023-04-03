@@ -1,0 +1,45 @@
+.App {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: Avenir,Century Gothic,sans-serif;
+  font-size: calc(10px + 2vmin);
+  font-style: normal;
+  font-weight: 100;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 40px
+}
+
+.App-sidebar {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: hsla(0,0%,100%,.1);
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  padding-left: 20px;
+  position: fixed;
+  top: 0;
+  width: 250px
+}
+
+.App-page {
+  padding-left: 300px;
+  top: 0
+}
+
+.App-row {
+  flex-direction: row;
+  gap: 10px 20px;
+  padding-right: 40px
+}
+
+.App-row,.container {
+  align-items: center;
+  display: flex
+}
+
+.container {
+  flex-direction: row wrap
+}
