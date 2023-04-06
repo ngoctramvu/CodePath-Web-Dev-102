@@ -1,0 +1,153 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  text-align: center;
+  color: #fff;
+  background-color: #0000007e
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: auto;
+  position: relative;
+  font-size: larger;
+}
+
+.mini-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px #0003,0 6px 20px #00000030;
+  background-color: #a2a1a180;
+}
+
+.whole-page {
+  margin-left: 100px
+}
+
+.home-page {
+  margin: 5%
+}
+
+button {
+  margin: 1%
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.sidenav {
+  height: 100%;
+  width: 12%;
+  position: fixed;
+  font-size: larger;
+  font-weight: bolder;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #5b5a5a;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column
+}
+
+.sidenav a {
+  color: white;
+  margin: 20px;
+}
+
+a {
+  color: white;
+}
+
+.sidenav img {
+  height: 150px;
+  width: auto;
+  position: absolute;
+  bottom: 10px;
+}
+
+.home-page img {
+  width: 500px;
+  height: auto
+}
+
+.crewmate-card {
+  border-radius: 10px;
+  border-style: double;
+  border-color: #00000043;
+  height: auto;
+  box-shadow: 0 0 5px 2px #faf9f94d;
+  margin: 20px;
+  padding: 25px;
+  text-align: center;
+  width: 300px;
+  background-color: #5b5a5a
+}
+
+.crewmate-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  flex-wrap: wrap
+}
+
+span {
+  background-color: #aaa;
+  color: #000;
+  padding: 3px;
+  border-radius: 3px
+}
+
+.single-crewmate {
+  height: 150px;
+  width: auto;
+}
+
+.crewmate-card a {
+  color: white;
+}
+
+#Green {
+  box-shadow: 15px -20px 15px #38be314d
+}
+
+#Red {
+  box-shadow: 15px -20px 15px #be2a2a4d
+}
+
+#Blue {
+  box-shadow: 15px -20px 15px #201ba84d
+}
+
+#Purple {
+  box-shadow: 15px -20px 15px #6443b79c
+}
+
+#Yellow {
+  box-shadow: 15px -20px 15px #c7ba274d
+}
+
+#Orange {
+  box-shadow: 15px -20px 15px #fa751685
+}
+
+#Pink {
+  box-shadow: 15px -20px 15px #b82bac81
+}
+
+#Rainbow {
+  box-shadow: 7px -5px 10px #4c0082b6,11px -9px 10px #0000ff71,16px -14px 10px #00ff007d,20px -17px 10px #ffff0093,24px -19px 10px #ff8000d7,27px -23px 10px #eb1818af,5px 5px 15px 5px #0000
+}
