@@ -4,7 +4,7 @@ import { supabase } from "../client";
 import Post from "../components/Post";
 
 const ViewPost = () => {
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState(null);
 
   const {id} = useParams();
 
@@ -14,21 +14,16 @@ const ViewPost = () => {
         .from("Posts")
         .select()
         .eq("id", id);
-
-      const response = await supabase
-        .storage
-        .from('forum')
-        .getPublicUrl('public/' + id + '.png');
       
-      setPost({...data[0], attachment: response.data.publicUrl});
+      setPost(data[0]);
     };
 
     fetchPost().catch(console.error);
   }, [])
 
   return (
-    <div className="view-page">
-      <Post post={post}/>
+    <div className="page-container">
+      {post && <Post post={post} setPost={setPost}/>}
     </div>
   )
 };

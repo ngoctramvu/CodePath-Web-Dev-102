@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import ReactTimeAgo from "react-time-ago";
 
 const PostPreview = ({post}) => {
 
   return (
-    <div className="post-preview">
+    <div className="post-container">
       <Link to={`/view/${post.id}`}>
-        <h4>{post.created_at}</h4>
-        <h2>{post.title}</h2>
-        <h4>{post.upvotes}</h4>
+        <p>Posted <ReactTimeAgo date={Date.parse(post.created_at)} locale="en-US" /></p>
+        <h3>{post.title}</h3>
+        <p>{post.upvotes} upvotes</p>
       </Link>
     </div>
   )

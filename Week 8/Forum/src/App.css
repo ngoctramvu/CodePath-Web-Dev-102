@@ -1,6 +1,151 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.App-header {
+  position: fixed;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.App-body {
+  margin-top: 80px;
+  padding: 2rem;
+}
+
+.nav-bar {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav-title {
+  margin: auto 30px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: right;
+  margin: auto 30px;
+}
+
+.nav-links a {
+  color: var(--white);
+}
+
+.post-container {
+  background-color: var(--white);
+  max-width: 50%;
+  min-width: 400px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.post-container h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.post-container a {
+  margin: 0px;
+}
+
+.post-container a:hover {
+  color: var(--dark-blue);
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.post-attachment {
+  margin-top: 10px;
+}
+
+.upvote-bar{
+  margin: auto 0px;
+}
+
+.upvote-bar span {
+  margin-left: 10px;
+}
+
+i.icon-background {
+  color: var(--light-gray);
+}
+
+.form-container {
+  background-color: var(--white);
+  width: 450px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.mini-container {
+  margin: 0px auto 20px;
+}
+
+input.title, textarea {
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--dark-gray);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.form-container .title {
+  height: 30px;
+  width: 400px;
+}
+
+.form-container .content {
+  height: 150px;
+  width: 400px;
+}
+
+.attachment-container {
+  justify-content: space-between;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--dark-gray);
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  width: 400px;
+  margin: 0px auto;
+}
+
+.upload-container {
+  display: flex;
+  align-items: left;
+  margin: auto 0px;
+}
+
+.upload-container .file{
+  width: 100px;
+}
+
+.form-container i {
+  margin: auto 5px;
 }

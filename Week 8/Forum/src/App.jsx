@@ -5,6 +5,7 @@ import Home from './routes/Home';
 import ViewPost from './routes/ViewPost';
 import NavBar from './routes/NavBar';
 import CreatePost from './routes/CreatePost';
+import UpdatePost from './routes/UpdatePost';
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
     {
       path: "/create",
       element: <CreatePost />
+    },
+    {
+      path: "/update/:id",
+      element: <UpdatePost />
     }
   ]);
 

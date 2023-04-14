@@ -18,7 +18,7 @@ const Home = ({}) => {
   }, []);
 
   return (
-    <div className="home-page">
+    <div className="page-container">
       {posts.map((post) =>
         <PostPreview
           key={post.id}
