@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReactTimeAgo from "react-time-ago";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../client";
+import CommentSection from "./CommentSection";
 
 const Post = ({post, setPost}) => {
   const [attachmentURL, setAttachmentURL] = useState(null);
@@ -73,6 +74,7 @@ const Post = ({post, setPost}) => {
           </span> 
         </div>
       </div>
+      <CommentSection post={post} />
     </div>
   );
 };

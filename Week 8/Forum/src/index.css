@@ -93,10 +93,19 @@ button {
 }
 
 button:hover {
-  border-color: var(--black);
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
 }
 
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+
+input, textarea {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.5;
 }

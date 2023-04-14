@@ -44,7 +44,7 @@
 
 .post-container {
   background-color: var(--white);
-  max-width: 50%;
+  max-width: 60%;
   min-width: 400px;
   margin: 25px auto;
   padding: 25px;
@@ -68,7 +68,7 @@
 .post-footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 15px 0px;
   width: 100%;
 }
 
@@ -100,12 +100,10 @@ i.icon-background {
   margin: 0px auto 20px;
 }
 
-input.title, textarea {
-  font-family: inherit;
-  font-size: 1em;
-  line-height: 1.5;
-  background-color: var(--white);
-  color: var(--black);
+.mini-container .title,
+.mini-container .content,
+.attachment-container,
+.comment-input input {
   border: 1px solid var(--dark-gray);
   border-radius: 5px;
   padding: 5px 10px;
@@ -124,13 +122,6 @@ input.title, textarea {
 .attachment-container {
   justify-content: space-between;
   font-family: inherit;
-  font-size: 1em;
-  line-height: 1.5;
-  background-color: var(--white);
-  color: var(--black);
-  border: 1px solid var(--dark-gray);
-  border-radius: 5px;
-  padding: 5px 10px;
   display: flex;
   width: 400px;
   margin: 0px auto;
@@ -143,9 +134,32 @@ input.title, textarea {
 }
 
 .upload-container .file{
-  width: 100px;
+  width: 120px;
 }
 
 .form-container i {
   margin: auto 5px;
+}
+
+.comment-container {
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.single-comment {
+  margin: 10px 0px;
+  padding-bottom: 15px;
+  border-bottom: 0.25px solid var(--dark-gray);
+}
+
+.comment-input {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-input input{
+  width: 100%;
+  margin-right: 5px;
 }
