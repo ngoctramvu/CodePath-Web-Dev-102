@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 const Form = ({post, setPost}) => {
-  const [text, setText] = useState(post.attachment ? "No File Chosen" : "Uploaded");
+  const [text, setText] = useState(post.attachment ? "Uploaded" : "No File Chosen");
 
   const inputRef = useRef(null);
 

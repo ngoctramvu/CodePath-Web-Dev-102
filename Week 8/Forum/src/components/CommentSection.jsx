@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import BeatLoader from "react-spinners/BeatLoader";
 import { supabase } from "../client";
 import Comment from "./Comment";
 
 const CommentSection = ({post}) => {
-  const [allComments, setAllComments] = useState([]);
+  const [allComments, setAllComments] = useState(null);
   const [comment, setComment] = useState({content: "", post_id: post.id});
 
   useEffect(() => {
@@ -32,14 +33,24 @@ const CommentSection = ({post}) => {
       .select();
 
     setAllComments((prev) => [...prev, data[0]]);
-    setComment((prev) => ({content: ""}));
+    setComment((prev) => ({...prev, content: ""}));
   }
 
   return (
     <div className="comment-container">
       <div className="comment-display">
-        {allComments.map((comment) => (
-          <Comment key={comment.id} content={comment.content} />
+        <BeatLoader
+          color={"#545E75"}
+          loading={allComments == null}
+          size={20}
+          margin={5}
+          cssOverride={{
+            display: "block",
+            margin: "20px auto",
+          }}
+        />
+        {allComments && allComments.map((comment) => (
+          <Comment key={comment.id} id={comment.id} content={comment.content} setAllComments={setAllComments}/>
         ))}
       </div>
       <div className="comment-input">

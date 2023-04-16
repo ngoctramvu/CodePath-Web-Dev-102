@@ -8,6 +8,7 @@
 
 .App-header {
   position: fixed;
+  z-index: 9999;
   height: 80px;
   top: 0;
   left: 0;
@@ -149,8 +150,23 @@ i.icon-background {
 
 .single-comment {
   margin: 10px 0px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 0.25px solid var(--dark-gray);
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-comment i {
+  visibility: hidden;
+  margin: auto 10px;
+}
+
+.single-comment:hover {
+  cursor: pointer;
+}
+
+.single-comment:hover i {
+  visibility: visible;
 }
 
 .comment-input {
@@ -162,4 +178,8 @@ i.icon-background {
 .comment-input input{
   width: 100%;
   margin-right: 5px;
+}
+
+.post-filters button {
+  margin-left: 10px;
 }

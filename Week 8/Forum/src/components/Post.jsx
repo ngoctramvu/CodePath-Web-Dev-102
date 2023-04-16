@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactTimeAgo from "react-time-ago";
 import { useNavigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 import { supabase } from "../client";
 import CommentSection from "./CommentSection";
 
@@ -16,7 +17,7 @@ const Post = ({post, setPost}) => {
         .from('forum')
         .getPublicUrl(`public/${post.id}`);
 
-        setAttachmentURL(data.publicUrl);
+      setAttachmentURL(`${data.publicUrl}?${Date.now()}`);
     }
   }, []);
 
@@ -28,7 +29,7 @@ const Post = ({post, setPost}) => {
       .update({upvotes: post.upvotes + 1})
       .eq("id", post.id);
     
-    setPost((prev) => ({...prev, upvotes: post.upvotes + 1}))
+    setPost((prev) => ({...prev, upvotes: post.upvotes + 1}));
   }
 
   const handleEdit = () => {
@@ -40,11 +41,21 @@ const Post = ({post, setPost}) => {
   const handleDelete = async (event) => {
     event.preventDefault();
 
-    const {error} = await supabase
+    await supabase
       .from("Posts")
       .delete()
       .eq("id", post.id);
     
+    await supabase
+      .from("Comments")
+      .delete()
+      .eq("post_id", post.id);
+
+    await supabase
+      .storage
+      .from("forum")
+      .remove([`public/${post.id}`]);
+
     window.location = "/";
   }
 
@@ -56,7 +67,16 @@ const Post = ({post, setPost}) => {
       </div>
       <div className="post-body">
         <p>{post.content}</p>
-        {attachmentURL && <img src={attachmentURL} className="post-attachment" alt="post attachment"/>}
+        <ClipLoader
+          color={"#82A0BC"}
+          loading={post.attachment && attachmentURL == null}
+          size={50}
+          cssOverride={{
+            display: "block",
+            margin: "200px auto",
+          }}
+        />
+        {attachmentURL && <img src={attachmentURL} height="200px" className="post-attachment" alt="post attachment"/>}
       </div>
       <div className="post-footer">
         <div className="upvote-bar">

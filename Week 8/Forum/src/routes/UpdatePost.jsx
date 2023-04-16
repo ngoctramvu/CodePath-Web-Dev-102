@@ -16,9 +16,9 @@ const UpdatePost = () => {
     
     if(post.file) {
       await supabase
-      .storage
-      .from("forum")
-      .upload(`public/${post.id}`, post.file, { upsert: true });
+        .storage
+        .from("forum")
+        .upload(`public/${post.id}`, post.file, { upsert: true });
     }
 
     window.location = `/view/${post.id}`;
