@@ -1,10 +1,12 @@
 import { React, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../client";
 import Form from "../components/Form";
 
 const UpdatePost = () => {
   const [post, setPost] = useState({...useLocation().state, file: null});
+
+  const navigate = useNavigate();
 
   const handleUpdate = async (event) => {
     event.preventDefault();
@@ -21,7 +23,7 @@ const UpdatePost = () => {
         .upload(`public/${post.id}`, post.file, { upsert: true });
     }
 
-    window.location = `/view/${post.id}`;
+    navigate(`/view/${post.id}`);
   }
 
   return (
