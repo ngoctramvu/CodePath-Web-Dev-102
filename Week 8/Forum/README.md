@@ -2,7 +2,7 @@
 
 Submitted by: **Tram Vu**
 
-This web app: **insert description**
+This web app: **is a forum surrounding movies for an online community. The web app will allow users to create posts and see a feed of them on the home page, edit, delete, or leave comments underneath them for discussions, and give upvotes for posts that they like!**
 
 Time spent: **9** hours spent in total
 
